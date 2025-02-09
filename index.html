@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style rel="stylesheet" href="/style.css"></style>
+</head>
+
+<body>
+    <h1 id="head" class="text-center text-light">Select a image and edit easily 👋</h1>
+    <div class="container col-lg-7">
+        <h1 class="text-center">Photo Editor</h1>
+        <div class="d-flex flex-wrap">
+            <div class="controls disable col-lg-5 col-md-5">
+                <h3 class="text-center">Filters</h3>
+                <div class="filters d-flex flex-wrap ">
+                    <button id="brightness" class="btn btn-primary">Brightness</button>
+                    <button id="saturation" class="btn">Saturation</button>
+                    <button id="grayscale" class="btn">Grayscale</button>
+                    <button id="invertion" class="btn">Invertion</button>
+                </div>
+                <div>
+                    <div class="range-div d-flex justify-content-between flex-wrap">
+                        <h5>Brightness</h5>
+                        <small>100%</small>
+                    </div>
+                    <input class="form-range" type="range" value="100" min="0" max="200">
+                </div>
+                <div class="">
+                    <h3 class="text-center">Rotate & Flip</h3>
+                    <div class=" rotatefilters d-flex flex wrap justify-content-around">
+                        <button id="left" class="btn btn-light"><i class="fa fa-undo"></i></button>
+                        <button id="right" class="btn btn-light"><i class="fa fa-repeat"></i></button>
+                        <button id="flip" class="btn btn-light"><i class="fa fa-exchange"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="img-preview col-lg-7 col-md-7">
+                <img src="https://i.stack.imgur.com/y9DpT.jpg">
+            </div>
+        </div>
+        <div class="img-btns d-flex flex-wrap justify-content-between">
+            <button id="reset" class="btn btn-danger">Reset Image</button>
+            <div>
+                <input id="input-file" type="file" accept="image/*" hidden>
+                <button id="change-img" class="btn btn-outline-primary">Change Image</button>
+                <button id="save" class="btn btn-success">Save Image</button>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
